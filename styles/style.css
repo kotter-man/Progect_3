@@ -1,0 +1,283 @@
+:root {
+  font-size: 18px;
+  line-height: 1.33333;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  color: #E9ECF3;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+*::before, *::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.app {
+  background-color: #131C2F;
+  padding-top: 125px;
+  padding-bottom: 62px;
+}
+
+.layout-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: #131C2F;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(233, 236, 243, 0.25);
+  padding: 12px 0;
+}
+
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.header .logo > img {
+  display: block;
+}
+.header .navigation {
+  display: flex;
+  align-items: center;
+}
+.header .navigation .nav-item {
+  position: relative;
+  padding: 6px 10px;
+}
+.header .navigation .nav-item > a {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3125;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #E9ECF3;
+}
+.header .navigation .nav-item .dropdown-wrapper {
+  display: none;
+  padding-top: 12px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+.header .navigation .nav-item .dropdown-wrapper .dropdown-menu {
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  padding: 8px;
+  min-width: 221px;
+  box-shadow: 0 0 0 1px rgba(14, 16, 20, 0.04), 0 0 2px rgba(14, 16, 20, 0.08), 0 4px 12px rgba(14, 16, 20, 0.08);
+}
+.header .navigation .nav-item .dropdown-wrapper .dropdown-menu a {
+  display: block;
+  color: #0E1014;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 8px;
+  border-radius: 4px;
+  letter-spacing: -0.02em;
+}
+.header .navigation .nav-item .dropdown-wrapper .dropdown-menu a:hover {
+  color: #1B8BE0;
+  background-color: #EBF6FF;
+}
+.header .navigation .nav-item:not(:last-child) {
+  margin-right: 3px;
+}
+.header .navigation .nav-item:hover {
+  background-color: rgba(233, 236, 243, 0.1);
+  border-radius: 8px;
+}
+.header .navigation .nav-item:hover a {
+  color: #24A3FF;
+}
+.header .navigation .nav-item:hover .dropdown-wrapper {
+  display: block;
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 40px 20px;
+  margin-bottom: 56px;
+}
+.section-grid .section-header h2 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0;
+  position: sticky;
+  top: 125px;
+  z-index: 50;
+}
+.section-grid .article-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px 20px;
+}
+.section-grid .article-grid article .article-image {
+  display: block;
+  position: relative;
+  height: 200px;
+  width: 100%;
+  background-size: auto 100%;
+  background-color: lightblue;
+}
+.section-grid .article-grid article .article-info {
+  margin-top: 8px;
+}
+.section-grid .article-grid article .article-title {
+  margin-top: 8px;
+}
+.section-grid .article-grid article .article-title a {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.33333;
+  color: #E9ECF3;
+}
+.section-grid .article-grid article .article-title a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.section-grid .article-grid article .article-title a:hover {
+  color: #24A3FF;
+}
+.section-grid .article-grid article .article-date {
+  font-size: 12px;
+  line-height: 1.75;
+  font-weight: 700;
+  color: #B1B1B1;
+  height: auto;
+}
+.section-grid .article-grid article .article-tags {
+  display: flex;
+  flex-flow: row wrap;
+}
+.section-grid .article-grid article .article-tags .tag {
+  font-size: 12px;
+  line-height: 1.75;
+  font-weight: 400;
+  color: #E9ECF3;
+  border: 1px solid rgba(233, 236, 243, 0.3);
+  border-radius: 24px;
+  padding: 4px 9px;
+  margin: 8px 8px 0 0;
+}
+.section-grid .article-grid article:first-child .article-image {
+  height: 260px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.section-grid .article-grid article:first-child a {
+  font-size: 24px;
+  line-height: 1.25;
+}
+.section-grid .article-grid article:first-child a:hover {
+  color: #24A3FF;
+}
+.section-grid .article-grid article:first-child {
+  grid-column-end: span 2;
+}
+.section-grid .article-grid:not(:last-child) {
+  grid-column-end: span 2;
+}
+.section-grid:last-child {
+  margin-bottom: 0;
+}
+.section-grid:last-child .article-grid article {
+  grid-column-end: span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+}
+.section-grid:last-child .article-grid article .article-image {
+  height: 200px;
+}
+.section-grid:last-child .article-grid article .article-info {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  margin-top: 0;
+}
+.section-grid:last-child .article-grid article .article-title {
+  flex: 1 0 auto;
+}
+.section-grid:last-child .article-grid article .article-title a {
+  font-size: 18px;
+}
+
+.article-comments {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  top: -30px;
+  right: -16px;
+  z-index: 30;
+  background-color: #FFFACB;
+  padding: 16;
+  border-radius: 9000px;
+}
+.article-comments .counter {
+  font-size: 16px;
+  line-height: 1, 3125;
+  font-weight: 700;
+  color: #0E1014;
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    max-width: 636px;
+  }
+  .app {
+    padding-top: 81px;
+    padding-bottom: 72px;
+  }
+  .section-grid {
+    display: block;
+    margin: 0;
+  }
+  .section-grid .article-grid {
+    padding-top: 29px;
+    padding-bottom: 32px;
+  }
+  .section-grid .section-header.sticky {
+    background-color: #131C2F;
+    box-shadow: 0px 9px 17px rgba(0, 0, 0, 0.25);
+    padding-top: 29px;
+    padding-bottom: 26px;
+    position: sticky;
+    top: 81px;
+    z-index: 70;
+    margin: 0 calc((100% - 100vw) / 2 + 9px);
+  }
+  .section-grid:first-child {
+    padding-top: 29px;
+  }
+  .section-grid:last-child .article-grid {
+    padding-bottom: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
