@@ -236,12 +236,12 @@ a {
   right: -16px;
   z-index: 30;
   background-color: #FFFACB;
-  padding: 16;
+  padding: 16px;
   border-radius: 9000px;
 }
 .article-comments .counter {
   font-size: 16px;
-  line-height: 1, 3125;
+  line-height: 1.3125;
   font-weight: 700;
   color: #0E1014;
 }
@@ -258,58 +258,20 @@ a {
     display: block;
     margin: 0;
   }
-  .section-grid .article-grid {
-    padding-top: 29px;
-    margin-bottom: 32px;
-  }
-  .section-grid .article-grid article .article-image {
-    background-size: cover;
+  .section-grid .section-header {
+    padding-top: 32px;
+    padding-bottom: 29px;
   }
   .section-grid .section-header.sticky {
     background-color: #131C2F;
-    box-shadow: 0px 9px 17px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 9px 17px rgba(0, 0, 0, 0.25);
     padding-top: 29px;
     padding-bottom: 26px;
-    position: sticky;
+    position: fixed;
     top: 81px;
     z-index: 70;
-    margin: 0 calc((100% - 100vw) / 2 + 9px);
-  }
-  .section-grid:first-child {
-    padding-top: 29px;
-  }
-  .section-grid:last-child .article-grid {
-    padding-bottom: 0;
-  }
-}
-@media screen and (max-width: 768px) {
-  .container {
-    max-width: 306px;
-  }
-  .app {
-    padding-top: 50px;
-    padding-bottom: 52px;
-  }
-  .section-grid {
-    display: block;
-    margin: 0;
-  }
-  .section-grid .article-grid {
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 64px;
-  }
-  .section-grid .article-grid article {
-    margin-bottom: 40px;
-  }
-  .section-grid .article-grid article .article-image {
-    background-size: cover;
-  }
-  .section-grid:first-child {
-    padding-top: 29px;
-  }
-  .section-grid:last-child .article-grid {
-    padding-bottom: 0;
+    width: 100%;
+    left: 0;
   }
 }
 
